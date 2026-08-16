@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="style.css">
+<!-- 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef5ff;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #003366;
+            letter-spacing: 2px;
+        }
+
+        form {
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px gray;
+        }
+
+        fieldset {
+            border: 2px solid #2c7be5;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            color: #003366;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid gray;
+            border-radius: 8px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        select:focus {
+            border-color: #2c7be5;
+            outline: none;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #2c7be5;
+            cursor: pointer;
+        }
+
+        input[type="submit"],
+        input[type="reset"],
+        button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background: #2c7be5;
+        }
+
+        input[type="reset"] {
+            background: gray;
+        }
+
+        button {
+            background: #dc3545;
+        }
+
+        input[type="submit"]:hover {
+            background: #003366;
+            transform: scale(1.05);
+        }
+
+        input[type="reset"]:hover {
+            background: black;
+            transform: scale(1.05);
+        }
+
+        button:hover {
+            background: #a71d2a;
+            transform: scale(1.05);
+        }
+
+        fieldset:hover {
+            box-shadow: 0px 0px 10px lightblue;
+        }
+
+        ::placeholder {
+            color: gray;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2c7be5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background: #003366;
+            transform: scale(1.05);
+        }
+    </style>
+     -->
+</head>
+
+<body>
+
+    <h1>⚙️ Settings</h1>
+
+    <form>
+
+        <fieldset>
+            <legend>👤 Profile Settings</legend>
+
+            <label>Change Name:</label><br>
+            <input type="text" placeholder="Enter your name"><br><br>
+
+            <label>Change Email:</label><br>
+            <input type="email" placeholder="Enter your email"><br><br>
+
+            <label>Change Password:</label><br>
+            <input type="password" placeholder="Enter new password">
+        </fieldset>
+
+        <fieldset>
+            <legend>🎨 Appearance</legend>
+
+            <label>Theme:</label><br>
+            <input type="radio" name="theme"> Light
+            <input type="radio" name="theme"> Dark
+
+            <br><br>
+
+            <label>Font Size:</label><br>
+            <input type="radio" name="font"> Small
+            <input type="radio" name="font"> Medium
+            <input type="radio" name="font"> Large
+        </fieldset>
+
+        <fieldset>
+            <legend>🔔 Notifications</legend>
+
+            <input type="checkbox"> Attendance Alerts<br>
+            <input type="checkbox"> Assignment Reminders<br>
+            <input type="checkbox"> Event Notifications
+        </fieldset>
+
+        <fieldset>
+            <legend>🌐 Language</legend>
+
+            <select>
+                <option>English</option>
+                <option>Gujarati</option>
+                <option>Hindi</option>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>🔒 Privacy</legend>
+
+            <input type="checkbox"> Show Profile to Others<br>
+            <input type="checkbox"> Hide Email
+        </fieldset>
+
+        <fieldset>
+            <legend>📧 Account</legend>
+
+            <label>Change Password:</label><br>
+            <input type="password" placeholder="New Password"><br><br>
+
+            <input type="submit" value="Save Changes">
+            <input type="reset" value="Reset">
+            <button type="button">Logout</button>
+        </fieldset>
+
+    </form>
+
+    <a href="home2.html">🔙 Back To Home</a>
+
+</body>
+
+</html>

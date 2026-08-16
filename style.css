@@ -1,0 +1,1098 @@
+/* ===== ORIGINAL CSS FROM home2.html ===== */
+
+
+body:has(.header){
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:linear-gradient(to right,#eef2f3,#d9e4f5);
+}
+
+
+body:has(.header) .header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#1e3a8a;
+    padding:15px 30px;
+}
+
+
+body:has(.header) .logo img{
+    height:80px;
+    width:80px;
+    border-radius:50%;
+}
+
+
+body:has(.header) .title{
+    color:white;
+    font-size:38px;
+    font-weight:bold;
+}
+
+
+body:has(.header) .buttons a{
+    text-decoration:none;
+    color:white;
+    background:#2563eb;
+    padding:10px 18px;
+    border-radius:10px;
+    margin-left:10px;
+    border:2px solid white;
+}
+
+
+body:has(.header) .buttons a:hover{
+    background:white;
+    color:#2563eb;
+}
+
+
+
+body:has(.header) .main{
+    display:flex;
+    padding:20px;
+    gap:30px;
+}
+
+
+
+body:has(.header) .menu{
+    width:250px;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0px 5px 10px gray;
+}
+
+
+body:has(.header) .menu a{
+    display:block;
+    text-decoration:none;
+    color:black;
+    padding:12px;
+    margin:8px 0;
+    border-radius:8px;
+    font-size:18px;
+}
+
+
+body:has(.header) .menu a:hover{
+    background:#dbeafe;
+    color:#1e3a8a;
+}
+
+
+
+body:has(.header) .content{
+    flex:1;
+    text-align:center;
+}
+
+
+body:has(.header) .content h1{
+    color:#1e3a8a;
+}
+
+
+body:has(.header) .cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin-top:40px;
+}
+
+
+body:has(.header) .card{
+    width:180px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0px 5px 10px gray;
+}
+
+
+body:has(.header) .card:hover{
+    transform:scale(1.05);
+}
+
+
+
+body:has(.header) footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+/* ===== ORIGINAL CSS FROM login2.html ===== */
+
+
+        body:has(.login-box){
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right,#eef2f3,#d9e4f5);
+        }
+
+
+        body:has(.login-box) .login-box{
+            width:350px;
+            margin:80px auto;
+            background:white;
+            border:2px solid black;
+            border-radius:15px;
+            padding:20px;
+            box-shadow:0px 5px 12px gray;
+        }
+
+
+        body:has(.login-box) h1,
+body:has(.login-box) h3{
+            text-align:center;
+            color:#1e3a8a;
+        }
+
+
+        body:has(.login-box) img{
+            display:block;
+            margin:auto;
+            border-radius:50%;
+        }
+
+
+        body:has(.login-box) input[type="text"],
+body:has(.login-box) input[type="password"]{
+            width:95%;
+            padding:8px;
+            border:1px solid gray;
+            border-radius:8px;
+        }
+
+
+        body:has(.login-box) input[type="submit"],
+body:has(.login-box) input[type="reset"]{
+            padding:8px 15px;
+            border:none;
+            border-radius:8px;
+            background:#1e3a8a;
+            color:white;
+            cursor:pointer;
+            margin-right:10px;
+        }
+
+
+        body:has(.login-box) input[type="submit"]:hover,
+body:has(.login-box) input[type="reset"]:hover{
+            background:#2563eb;
+        }
+
+
+        body:has(.login-box) a{
+            text-decoration:none;
+            color:#1e3a8a;
+            font-weight:bold;
+        }
+
+
+        body:has(.login-box) a:hover{
+            text-decoration:underline;
+        }
+
+
+        body:has(.login-box) hr{
+            margin:20px 0;
+        }
+
+/* ===== ORIGINAL CSS FROM signup2.html ===== */
+
+
+        body:has(.signup-box){
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right,#eef2f3,#d9e4f5);
+        }
+
+
+        body:has(.signup-box) .signup-box{
+            width:350px;
+            margin:80px auto;
+            background:white;
+            border:2px solid black;
+            border-radius:15px;
+            padding:20px;
+            box-shadow:0px 5px 10px gray;
+        }
+
+
+        body:has(.signup-box) h1{
+            text-align:center;
+            color:#1e3a8a;
+        }
+
+
+        body:has(.signup-box) input[type="text"],
+body:has(.signup-box) input[type="password"]{
+            width:95%;
+            padding:8px;
+            border:1px solid gray;
+            border-radius:8px;
+        }
+
+
+        body:has(.signup-box) .button{
+            text-align:center;
+            margin-top:20px;
+        }
+
+
+        body:has(.signup-box) .button input{
+            padding:8px 15px;
+            margin:5px;
+            border-radius:8px;
+            cursor:pointer;
+        }
+
+
+        body:has(.signup-box) .button input:hover{
+            background:#1e3a8a;
+            color:white;
+        }
+
+
+        body:has(.signup-box) .links{
+            text-align:center;
+            margin-top:20px;
+        }
+
+
+        body:has(.signup-box) .links a{
+            text-decoration:none;
+            color:#1e3a8a;
+            font-weight:bold;
+        }
+
+/* ===== ORIGINAL CSS FROM profile2.html ===== */
+
+
+        body:has(.profile-box){
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right,#eef2f3,#d9e4f5);
+        }
+
+
+        body:has(.profile-box) .profile-box{
+            width:500px;
+            margin:50px auto;
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0px 5px 15px gray;
+        }
+
+
+        body:has(.profile-box) h1{
+            text-align:center;
+            color:#1e3a8a;
+        }
+
+
+        body:has(.profile-box) table{
+            width:100%;
+        }
+
+
+        body:has(.profile-box) td{
+            padding:12px;
+        }
+
+
+        body:has(.profile-box) input{
+            width:95%;
+            padding:8px;
+            border:1px solid gray;
+            border-radius:8px;
+        }
+
+
+        body:has(.profile-box) .button{
+            text-align:center;
+            margin-top:20px;
+        }
+
+
+        body:has(.profile-box) .button a{
+            text-decoration:none;
+            background:#1e3a8a;
+            color:white;
+            padding:10px 18px;
+            border-radius:8px;
+        }
+
+
+        body:has(.profile-box) .button a:hover{
+            background:#2563eb;
+        }
+
+/* ===== ORIGINAL CSS FROM contact2(2).html ===== */
+
+    body:has(.contact-box){
+    font-family: Arial, sans-serif;
+    background-color:#eef5ff;
+    margin:20px;
+}
+
+
+body:has(.contact-box) h1{
+    text-align:center;
+    color:#003366;
+    letter-spacing:2px;
+}
+
+
+body:has(.contact-box) h2{
+    color:#2c7be5;
+}
+
+
+body:has(.contact-box) hr{
+    border:1px solid lightgray;
+}
+
+
+body:has(.contact-box) p{
+    background:white;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0px 0px 8px lightgray;
+    margin-bottom:15px;
+    line-height:25px;
+}
+
+
+body:has(.contact-box) b{
+    color:#003366;
+}
+
+
+body:has(.contact-box) a{
+    color:#2c7be5;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+
+body:has(.contact-box) a:hover{
+    color:#003366;
+    text-decoration:underline;
+}
+
+
+body:has(.contact-box) .contact-box{
+    width:70%;
+    margin:auto;
+}
+
+/* ===== ORIGINAL CSS FROM courses2(2).html ===== */
+
+    body:has(table){
+        font-family: Arial, sans-serif;
+        background-color: #eef5ff;
+        margin: 20px;
+    }
+
+
+    body:has(table) h1{
+        text-align: center;
+        color: #003366;
+        letter-spacing: 2px;
+    }
+
+
+    body:has(table) table{
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        text-align: center;
+        box-shadow: 0px 0px 12px gray;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+
+    body:has(table) th{
+        background-color: #2c7be5;
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+    }
+
+
+    body:has(table) td{
+        padding: 12px;
+    }
+
+
+    body:has(table) tr:nth-child(even){
+        background-color: #f5f9ff;
+    }
+
+
+    body:has(table) tr:hover{
+        background-color: #dbeeff;
+    }
+
+
+    body:has(table) td:first-child{
+        font-weight: bold;
+        color: #003366;
+    }
+
+
+    body:has(table) a{
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #2c7be5;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+
+    body:has(table) a:hover{
+        background-color: #003366;
+        transform: scale(1.05);
+    }
+
+/* ===== ORIGINAL CSS FROM assignment2(2).html ===== */
+
+        body:has(table){
+    font-family: Arial, sans-serif;
+    background-color:#eef5ff;
+    margin:20px;
+}
+
+
+body:has(table) h1{
+    text-align:center;
+    color:#003366;
+    letter-spacing:2px;
+}
+
+
+body:has(table) table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    text-align:center;
+    box-shadow:0px 0px 12px gray;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+
+body:has(table) th{
+    background:#2c7be5;
+    color:white;
+    padding:15px;
+}
+
+
+body:has(table) td{
+    padding:12px;
+}
+
+
+body:has(table) tr:nth-child(even){
+    background:#f5f9ff;
+}
+
+
+body:has(table) tr:hover{
+    background:#dbeeff;
+}
+
+
+body:has(table) select{
+    padding:6px;
+    border:2px solid #2c7be5;
+    border-radius:6px;
+}
+
+
+body:has(table) input[type="file"]{
+    padding:5px;
+}
+
+
+body:has(table) a{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+
+body:has(table) a:hover{
+    background:#003366;
+    transform:scale(1.05);
+}
+
+/* ===== ORIGINAL CSS FROM result2.html ===== */
+
+       body:has(table){
+    font-family: Arial, sans-serif;
+    background-color:#eef5ff;
+    margin:20px;
+}
+
+
+body:has(table) h1{
+    text-align:center;
+    color:#003366;
+    letter-spacing:2px;
+}
+
+
+body:has(table) label{
+    font-size:18px;
+    font-weight:bold;
+}
+
+
+body:has(table) select{
+    padding:8px;
+    border:2px solid #003366;
+    border-radius:8px;
+    margin-bottom:20px;
+}
+
+
+body:has(table) select:focus{
+    border-color:#2c7be5;
+    outline:none;
+}
+
+
+body:has(table) table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    text-align:center;
+    box-shadow:0px 0px 12px gray;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+
+body:has(table) th{
+    background:#2c7be5;
+    color:white;
+    padding:15px;
+    font-size:18px;
+}
+
+
+body:has(table) td{
+    padding:12px;
+}
+
+
+body:has(table) tr:nth-child(even){
+    background:#f5f9ff;
+}
+
+
+body:has(table) tr:hover{
+    background:#dbeeff;
+}
+
+
+body:has(table) td:first-child{
+    font-weight:bold;
+    color:#003366;
+}
+
+
+body:has(table) td:nth-child(3){
+    font-weight:bold;
+}
+
+
+body:has(table) p{
+    margin-top:20px;
+    font-size:20px;
+    font-weight:bold;
+    color:#003366;
+}
+
+
+body:has(table) a{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+
+body:has(table) a:hover{
+    background:#003366;
+    transform:scale(1.05);
+}
+
+/* ===== ORIGINAL CSS FROM attendence2(2).html ===== */
+
+    body:has(table){
+    font-family: Arial, sans-serif;
+    background-color:#eef5ff;
+    margin:20px;
+}
+
+
+body:has(table) h1{
+    text-align:center;
+    color:#003366;
+    letter-spacing:2px;
+}
+
+
+body:has(table) label{
+    font-size:18px;
+    font-weight:bold;
+}
+
+
+body:has(table) input[type="date"]{
+    padding:8px;
+    border:2px solid #003366;
+    border-radius:8px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+
+body:has(table) table{
+    width:100%;
+    border-collapse:collapse;
+    background-color:white;
+    text-align:center;
+    box-shadow:0px 0px 12px gray;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+
+body:has(table) th{
+    background-color:#2c7be5;
+    color:white;
+    padding:15px;
+}
+
+
+body:has(table) td{
+    padding:12px;
+}
+
+
+body:has(table) tr:nth-child(even){
+    background-color:#f5f9ff;
+}
+
+
+body:has(table) tr:hover{
+    background-color:#dbeeff;
+}
+
+
+body:has(table) a{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background-color:#2c7be5;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+
+body:has(table) a:hover{
+    background-color:#003366;
+    transform:scale(1.05);
+}
+
+/* ===== ORIGINAL CSS FROM events2(2).html ===== */
+
+    body:has(.container){
+    font-family: Arial, sans-serif;
+    background-color:#eef5ff;
+    margin:20px;
+}
+
+
+body:has(.container) h1{
+    text-align:center;
+    color:#003366;
+    letter-spacing:2px;
+}
+
+
+body:has(.container) .container{
+    display:flex;
+    justify-content:space-evenly;
+    gap:20px;
+    margin-top:30px;
+}
+
+
+body:has(.container) .event{
+    width:280px;
+    background:white;
+    border:2px solid #2c7be5;
+    border-radius:15px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0px 0px 12px gray;
+    transition:0.3s;
+}
+
+
+body:has(.container) .event:hover{
+    transform:translateY(-8px);
+    box-shadow:0px 0px 18px gray;
+}
+
+
+body:has(.container) .event h2{
+    color:#003366;
+}
+
+
+body:has(.container) .event p{
+    line-height:25px;
+}
+
+
+body:has(.container) a{
+    display:inline-block;
+    margin-top:10px;
+    padding:10px 18px;
+    background:#2c7be5;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+
+body:has(.container) a:hover{
+    background:#003366;
+    transform:scale(1.05);
+}
+
+
+body:has(.container) hr{
+    border:1px solid lightgray;
+}
+
+
+body:has(.container)>p{
+    text-align:center;
+    font-size:18px;
+    color:green;
+    margin-top:30px;
+}
+
+/* ===== ORIGINAL CSS FROM setting2.html ===== */
+
+        body:has(form){
+            font-family: Arial, sans-serif;
+            background-color: #eef5ff;
+            margin: 20px;
+        }
+
+
+        body:has(form) h1{
+            text-align: center;
+            color: #003366;
+            letter-spacing: 2px;
+        }
+
+
+        body:has(form) form{
+            width: 70%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 15px gray;
+        }
+
+
+        body:has(form) fieldset{
+            border: 2px solid #2c7be5;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+
+        body:has(form) legend{
+            color: #003366;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        body:has(form) label{
+            font-weight: bold;
+        }
+
+
+        body:has(form) input[type="text"],
+body:has(form) input[type="email"],
+body:has(form) input[type="password"],
+body:has(form) select{
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid gray;
+            border-radius: 8px;
+        }
+
+
+        body:has(form) input[type="text"]:focus,
+body:has(form) input[type="email"]:focus,
+body:has(form) input[type="password"]:focus,
+body:has(form) select:focus{
+            border-color: #2c7be5;
+            outline: none;
+        }
+
+
+        body:has(form) input[type="radio"],
+body:has(form) input[type="checkbox"]{
+            accent-color: #2c7be5;
+            cursor: pointer;
+        }
+
+
+        body:has(form) input[type="submit"],
+body:has(form) input[type="reset"],
+body:has(form) button{
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-right: 10px;
+        }
+
+
+        body:has(form) input[type="submit"]{
+            background: #2c7be5;
+        }
+
+
+        body:has(form) input[type="reset"]{
+            background: gray;
+        }
+
+
+        body:has(form) button{
+            background: #dc3545;
+        }
+
+
+        body:has(form) input[type="submit"]:hover{
+            background: #003366;
+            transform: scale(1.05);
+        }
+
+
+        body:has(form) input[type="reset"]:hover{
+            background: black;
+            transform: scale(1.05);
+        }
+
+
+        body:has(form) button:hover{
+            background: #a71d2a;
+            transform: scale(1.05);
+        }
+
+
+        body:has(form) fieldset:hover{
+            box-shadow: 0px 0px 10px lightblue;
+        }
+
+
+        body:has(form) ::placeholder{
+            color: gray;
+        }
+
+
+        body:has(form) a{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #2c7be5;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+
+        body:has(form) a:hover{
+            background: #003366;
+            transform: scale(1.05);
+        }
+
+/* ===== ORIGINAL CSS FROM feedback2(2).html ===== */
+
+    body:has(form){
+    font-family: Arial, sans-serif;
+    background-color:#eef5ff;
+    margin:20px;
+}
+
+
+body:has(form) h1{
+    text-align:center;
+    color:#003366;
+    letter-spacing:2px;
+}
+
+
+body:has(form) form{
+    width:70%;
+    margin:auto;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0px 0px 15px gray;
+}
+
+
+body:has(form) fieldset{
+    border:2px solid #2c7be5;
+    border-radius:10px;
+    padding:15px;
+}
+
+
+body:has(form) legend{
+    color:#003366;
+    font-size:18px;
+    font-weight:bold;
+}
+
+
+body:has(form) label{
+    font-weight:bold;
+}
+
+
+body:has(form) input[type="text"],
+body:has(form) input[type="email"],
+body:has(form) select,
+body:has(form) textarea{
+    width:95%;
+    padding:10px;
+    margin-top:5px;
+    border:2px solid gray;
+    border-radius:8px;
+    font-size:15px;
+}
+
+
+body:has(form) input[type="text"]:focus,
+body:has(form) input[type="email"]:focus,
+body:has(form) select:focus,
+body:has(form) textarea:focus{
+    border-color:#2c7be5;
+    outline:none;
+}
+
+
+body:has(form) textarea{
+    resize:vertical;
+}
+
+
+body:has(form) input[type="radio"]{
+    cursor:pointer;
+}
+
+
+body:has(form) input[type="submit"],
+body:has(form) input[type="reset"]{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+    font-size:16px;
+}
+
+
+body:has(form) input[type="submit"]{
+    background-color:#2c7be5;
+}
+
+
+body:has(form) input[type="reset"]{
+    background-color:gray;
+}
+
+
+body:has(form) input[type="submit"]:hover{
+    background-color:#003366;
+    transform:scale(1.05);
+}
+
+
+body:has(form) input[type="reset"]:hover{
+    background-color:black;
+    transform:scale(1.05);
+}
+
+
+body:has(form) hr{
+    border:1px solid lightgray;
+}
+
+
+body:has(form) p{
+    text-align:center;
+    color:green;
+    font-size:18px;
+}
+
+
+body:has(form) a{
+    display:inline-block;
+    margin-top:20px;
+    padding:10px 20px;
+    background:#2c7be5;
+    color:white;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
+}
+
+
+body:has(form) a:hover{
+    background:#003366;
+    transform:scale(1.05);
+}

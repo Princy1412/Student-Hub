@@ -8,7 +8,70 @@
 </head>
 
 <body class="home">
+<div id="notification">
+    🎉 Welcome to Student Hub!
+    <button onclick="closeNotification()">✖</button>
+</div>
+<section class="faq">
+    <h2>Frequently Asked Questions</h2>
 
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            What is Student Hub?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>Student Hub is a portal that helps students manage their academic information easily.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            How can I check my attendance?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>You can check your attendance from the Attendance section of Student Hub.</p>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question" onclick="toggleFAQ(this)">
+            Where can I see my results?
+            <span>+</span>
+        </button>
+
+        <div class="faq-answer">
+            <p>You can view your academic results from the Result section.</p>
+        </div>
+    </div>
+</section>
+<!-- Modal Popup -->
+<button onclick="openModal()">Open Student Info</button>
+
+<div id="studentModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <h2>Student Information</h2>
+        <p>Welcome to Student Hub!</p>
+        <p>Here you can manage your profile, courses, attendance and results.</p>
+
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+<div class="slider">
+    <img id="sliderImage" src="image1.jpg" alt="Student Hub">
+
+    <h3 id="sliderTitle">Student Dashboard</h3>
+    <p id="sliderText">Manage your student information easily.</p>
+
+    <button onclick="previousSlide()">Previous</button>
+    <button onclick="nextSlide()">Next</button>
+</div>
+<button id="themeButton" onclick="toggleTheme()">🌙 Dark Mode</button>
 <div class="header">
 
     <div class="logo">
@@ -29,6 +92,8 @@
 <div class="main">
 
     <div class="menu">
+        <nav>
+<button type="button" id="menuButton">☰</button>
 
         <a href="profile2.html">👤 Profile</a>
 
@@ -49,7 +114,7 @@
         <a href="feedback2.html">💬 Feedback</a>
 
         <a href="logout2.html">🚪 Logout</a>
-
+        </nav>
     </div>
 
     <div class="content">
@@ -89,6 +154,6 @@
     © 2026 Student Hub | All Rights Reserved
 
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

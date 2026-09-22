@@ -1,6 +1,4 @@
-// ===============================
 // NOTIFICATION BANNER
-// ===============================
 
 function closeNotification() {
     let notification = document.getElementById("notification");
@@ -11,9 +9,7 @@ function closeNotification() {
 }
 
 
-// ===============================
 // COLLAPSIBLE FAQ
-// ===============================
 
 function toggleFAQ(button) {
 
@@ -33,9 +29,7 @@ function toggleFAQ(button) {
 }
 
 
-// ===============================
 // MODAL POPUP
-// ===============================
 
 function openModal() {
 
@@ -57,17 +51,11 @@ function closeModal() {
 }
 
 
-// ===============================
 // IMAGE / CONTENT SLIDER
-// ===============================
 
 let slideIndex = 0;
 
-let images = [
-    "image1.jpg",
-    "image2.jpg",
-    "image3.jpg"
-];
+let images = ["image1.png", "image2.png", "image3.png"];
 
 let titles = [
     "Student Dashboard",
@@ -122,9 +110,7 @@ function previousSlide() {
 }
 
 
-// ===============================
 // HAMBURGER MENU
-// ===============================
 
 const menuButton = document.getElementById("menuButton");
 const menu = document.querySelector(".menu nav");
@@ -140,13 +126,13 @@ if (menu && menuButton) {
 
         if (window.innerWidth <= 768) {
 
-            menuLinks.forEach(function(link) {
+            menuLinks.forEach(function (link) {
                 link.style.display = "none";
             });
 
         } else {
 
-            menuLinks.forEach(function(link) {
+            menuLinks.forEach(function (link) {
                 link.style.display = "block";
             });
 
@@ -156,9 +142,9 @@ if (menu && menuButton) {
     setupMenu();
 
 
-    menuButton.addEventListener("click", function() {
+    menuButton.addEventListener("click", function () {
 
-        menuLinks.forEach(function(link) {
+        menuLinks.forEach(function (link) {
 
             if (link.style.display === "none") {
                 link.style.display = "block";
@@ -176,9 +162,7 @@ if (menu && menuButton) {
 }
 
 
-// ===============================
 // DARK / LIGHT THEME
-// ===============================
 
 function toggleTheme() {
 
@@ -187,23 +171,15 @@ function toggleTheme() {
 }
 
 
-// ===============================
-// PRACTICAL 5
 // REGISTRATION FORM VALIDATION
-// ===============================
 
 let form = document.getElementById("registrationForm");
 
 if (form) {
 
-    form.addEventListener("submit", function(event) {
+    form.addEventListener("submit", function (event) {
 
-        event.preventDefault();
-
-
-        // ===============================
         // GET VALUES
-        // ===============================
 
         let name = document.getElementById("name").value.trim();
 
@@ -232,9 +208,7 @@ if (form) {
             document.getElementById("terms").checked;
 
 
-        // ===============================
         // ERROR ELEMENTS
-        // ===============================
 
         let nameError = document.getElementById("nameError");
 
@@ -257,9 +231,8 @@ if (form) {
         let semesterError =
             document.getElementById("semesterError");
 
-        // ===============================
+
         // CLEAR PREVIOUS ERRORS
-        // ===============================
 
         if (nameError) nameError.innerText = "";
 
@@ -277,12 +250,11 @@ if (form) {
 
         if (semesterError) semesterError.innerText = "";
 
+
         let valid = true;
 
 
-        // ===============================
         // REGULAR EXPRESSIONS
-        // ===============================
 
         let namePattern = /^[A-Za-z ]+$/;
 
@@ -296,9 +268,7 @@ if (form) {
             /^(?=.*[A-Za-z])(?=.*\d).{6,}$/;
 
 
-        // ===============================
         // NAME VALIDATION
-        // ===============================
 
         if (name === "") {
 
@@ -320,9 +290,7 @@ if (form) {
         }
 
 
-        // ===============================
         // ROLL NUMBER VALIDATION
-        // ===============================
 
         if (rollNumber === "") {
 
@@ -349,9 +317,7 @@ if (form) {
         }
 
 
-        // ===============================
         // EMAIL VALIDATION
-        // ===============================
 
         if (email === "") {
 
@@ -374,9 +340,7 @@ if (form) {
         }
 
 
-        // ===============================
         // MOBILE VALIDATION
-        // ===============================
 
         if (mobile === "") {
 
@@ -399,9 +363,7 @@ if (form) {
         }
 
 
-        // ===============================
         // PASSWORD VALIDATION
-        // ===============================
 
         if (password === "") {
 
@@ -424,9 +386,7 @@ if (form) {
         }
 
 
-        // ===============================
         // CONFIRM PASSWORD
-        // ===============================
 
         if (confirmPassword === "") {
 
@@ -449,9 +409,7 @@ if (form) {
         }
 
 
-        // ===============================
         // COURSE VALIDATION
-        // ===============================
 
         if (course === "") {
 
@@ -470,9 +428,7 @@ if (form) {
         }
 
 
-        // ===============================
         // YEAR VALIDATION
-        // ===============================
 
         if (year === "") {
 
@@ -489,52 +445,72 @@ if (form) {
 
             valid = false;
         }
-// ===============================
-// SEMESTER VALIDATION
-// ===============================
 
-if (semester === "") {
 
-    if (semesterError) {
-        semesterError.innerText =
-            "Please enter your semester.";
-    }
+        // SEMESTER VALIDATION
 
-    valid = false;
-}
-// ===============================
-// GENDER AND TERMS VALIDATION
-// ===============================
+        if (semester === "") {
 
-let gender = document.querySelector(
-    'input[name="gender"]:checked'
-);
+            if (semesterError) {
+                semesterError.innerText =
+                    "Please enter your semester.";
+            }
 
-let genderTermsError = "";
+            valid = false;
+        }
 
-if (!gender) {
-    genderTermsError += "Please select your gender.\n";
-}
 
-if (!terms) {
-    genderTermsError += "Please accept the Terms and Conditions.";
-}
+        // GENDER VALIDATION
 
-if (genderTermsError !== "") {
-    alert(genderTermsError);
-    valid = false;
-}
+        let gender = document.querySelector(
+            'input[name="gender"]:checked'
+        );
 
-        // ===============================
+        let genderError = document.getElementById("genderError");
+
+        let termsError = document.getElementById("termsError");
+
+
+        if (genderError) {
+            genderError.innerText = "";
+        }
+
+        if (termsError) {
+            termsError.innerText = "";
+        }
+
+
+        if (!gender) {
+
+            if (genderError) {
+                genderError.innerText =
+                    "Please select your gender.";
+            }
+
+            valid = false;
+        }
+
+
+        // TERMS VALIDATION
+
+        if (!terms) {
+
+            if (termsError) {
+                termsError.innerText =
+                    "Please accept the Terms and Conditions.";
+            }
+
+            valid = false;
+        }
+
+
         // FINAL RESULT
-        // ===============================
 
-        if (valid) {
+        // If form is invalid, stop submission.
+        // If form is valid, allow it to go to register.php.
 
-            alert("🎉 Registration Successful!");
-
-            form.reset();
-
+        if (!valid) {
+            event.preventDefault();
         }
 
     });

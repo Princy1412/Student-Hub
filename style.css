@@ -428,15 +428,21 @@ a {
 .feedback input[type="email"],
 .feedback select,
 .feedback textarea,
-.register-box input,
+.register-box input[type="text"],
+.register-box input[type="email"],
+.register-box input[type="tel"],
+.register-box input[type="password"],
 .register-box select,
 .register-box textarea {
+
     width: 95%;
+
     padding: 10px;
+
     border: 2px solid gray;
+
     border-radius: 8px;
 }
-
 .setting input[type="submit"],
 .setting input[type="reset"],
 .setting button,
@@ -809,4 +815,9 @@ a {
 .dark-mode footer {
     background: #333;
     color: white;
+}
+.register-box small {
+    display: block;
+    color: red;
+    margin-top: 5px;
 }

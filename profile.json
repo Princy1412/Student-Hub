@@ -1,0 +1,52 @@
+{
+    "students": [
+        {
+            "name": "Princy Khamar",
+            "id": "CSE001",
+            "email": "princy@example.com",
+            "semester": "3rd Semester",
+            "course": "CSE",
+            "phone": "9876543210"
+        },
+        {
+            "name": "Anandi Dihora",
+            "id": "CE002",
+            "email": "anandi@example.com",
+            "semester": "3rd Semester",
+            "course": "CE",
+            "phone": "9876543211"
+        },
+        {
+            "name": "Riya Shah",
+            "id": "IT003",
+            "email": "riya@example.com",
+            "semester": "3rd Semester",
+            "course": "IT",
+            "phone": "9876543212"
+        },
+        {
+            "name": "Yesha Kevadiya",
+            "id": "CSE004",
+            "email": "yesha@example.com",
+            "semester": "4th Semester",
+            "course": "CSE",
+            "phone": "9876543213"
+        },
+        {
+            "name": "Rutvi Modi",
+            "id": "CSE005",
+            "email": "rutvi@example.com",
+            "semester": "4th Semester",
+            "course": "CSE",
+            "phone": "9876543214"
+        },
+        {
+            "name": "Dhruvi kakdia",
+            "id": "CSE006",
+            "email": "dhruvi@example.com",
+            "semester": "2nd Semester",
+            "course": "CSE",
+            "phone": "9876543215"
+        }
+    ]
+}

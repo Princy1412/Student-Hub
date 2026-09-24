@@ -4,57 +4,331 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Student Profiles</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="profile">
 
-<div class="profile-box">
+    <div class="profile-box">
 
-<h1>👤 Student Profile</h1>
+        <h1>👤 Student Profiles</h1>
 
-<hr>
+        <hr>
 
-<table>
+        <!-- SEARCH -->
+        <input type="text" id="searchInput" placeholder="🔍 Search by Name or ID">
 
-    <tr>
-        <td><b>Name</b></td>
-        <td><input type="text" placeholder="Enter Name"></td>
-    </tr>
+        <!-- COURSE FILTER -->
+        <select id="courseFilter">
+            <option value="All">📚 All Courses</option>
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="CE">CE</option>
+        </select>
 
-    <tr>
-        <td><b>ID</b></td>
-        <td><input type="text" placeholder="Enter ID"></td>
-    </tr>
+        <!-- SORTING -->
+        <select id="sortOrder">
+            <option value="none">↕️ Sort By Name</option>
+            <option value="az">A → Z</option>
+            <option value="za">Z → A</option>
+        </select>
 
-    <tr>
-        <td><b>Email</b></td>
-        <td><input type="email" placeholder="Enter Email"></td>
-    </tr>
+        <!-- STUDENT PROFILES -->
+        <div id="profileContainer"></div>
 
-    <tr>
-        <td><b>Semester</b></td>
-        <td><input type="text" placeholder="Enter Semester"></td>
-    </tr>
+        <!-- PAGINATION -->
+        <div id="pagination">
 
-    <tr>
-        <td><b>Course</b></td>
-        <td><input type="text" placeholder="Enter Course"></td>
-    </tr>
+            <button id="prevBtn">
+                ⬅️ Previous
+            </button>
 
-    <tr>
-        <td><b>Phone Number</b></td>
-        <td><input type="tel" placeholder="Enter Phone Number"></td>
-    </tr>
+            <span id="pageNumber">
+                Page 1
+            </span>
 
-</table>
+            <button id="nextBtn">
+                Next ➡️
+            </button>
 
-<div class="button">
-    <a href="home2.html" class="back-home">🏠 Back To Home</a>
-</div>
+        </div>
 
-</div>
+        <!-- BACK BUTTON -->
+        <div class="button">
+            <a href="home2.html" class="back-home">
+                🏠 Back To Home
+            </a>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // STUDENT DATA
+
+        let students = [];
+
+        let currentPage = 1;
+
+        let studentsPerPage = 3;
+
+
+        // FETCH JSON DATA
+
+        fetch("profile.json")
+
+            .then(response => response.json())
+
+            .then(data => {
+
+                students = data.students;
+
+                renderStudents(students);
+
+            })
+
+            .catch(error => {
+
+                console.log("Error loading profile:", error);
+
+            });
+
+
+        // DISPLAY STUDENTS
+
+        function renderStudents(list) {
+
+            let container =
+                document.getElementById("profileContainer");
+
+            container.innerHTML = "";
+
+
+            // CALCULATE PAGE
+
+            let start =
+                (currentPage - 1) * studentsPerPage;
+
+            let end =
+                start + studentsPerPage;
+
+
+            let pageStudents =
+                list.slice(start, end);
+
+
+            // DISPLAY STUDENTS
+
+            pageStudents.forEach(student => {
+
+                let profile =
+                    document.createElement("div");
+
+
+                profile.innerHTML = `
+
+                    <h2>👤 ${student.name}</h2>
+
+                    <p>
+                        <b>ID:</b> ${student.id}
+                    </p>
+
+                    <p>
+                        <b>Email:</b> ${student.email}
+                    </p>
+
+                    <p>
+                        <b>Semester:</b> ${student.semester}
+                    </p>
+
+                    <p>
+                        <b>Course:</b> ${student.course}
+                    </p>
+
+                    <p>
+                        <b>Phone:</b> ${student.phone}
+                    </p>
+
+                    <hr>
+
+                `;
+
+
+                container.appendChild(profile);
+
+            });
+
+
+            updatePagination(list);
+
+        }
+
+        // UPDATE PAGINATION
+        function updatePagination(list) {
+
+            let totalPages =
+                Math.ceil(list.length / studentsPerPage);
+
+
+            document.getElementById("pageNumber").innerText =
+                "Page " + currentPage + " of " + totalPages;
+
+
+            document.getElementById("prevBtn").disabled =
+                currentPage === 1;
+
+
+            document.getElementById("nextBtn").disabled =
+                currentPage === totalPages;
+
+        }
+
+        // PREVIOUS BUTTON
+
+        document.getElementById("prevBtn")
+            .addEventListener("click", function () {
+
+                if (currentPage > 1) {
+
+                    currentPage--;
+
+                    filterStudents();
+
+                }
+
+            });
+
+        // NEXT BUTTON
+
+        document.getElementById("nextBtn")
+            .addEventListener("click", function () {
+
+                currentPage++;
+
+                filterStudents();
+
+            });
+
+        // SEARCH
+
+        document.getElementById("searchInput")
+            .addEventListener("input", function () {
+
+                currentPage = 1;
+
+                filterStudents();
+
+            });
+
+        // COURSE FILTER
+
+        document.getElementById("courseFilter")
+            .addEventListener("change", function () {
+
+                currentPage = 1;
+
+                filterStudents();
+
+            });
+
+        // SORTING
+
+        document.getElementById("sortOrder")
+            .addEventListener("change", function () {
+
+                currentPage = 1;
+
+                filterStudents();
+
+            });
+
+        // SEARCH + FILTER + SORT
+
+        function filterStudents() {
+
+            let keyword =
+                document.getElementById("searchInput")
+                    .value
+                    .toLowerCase();
+
+
+            let course =
+                document.getElementById("courseFilter")
+                    .value;
+
+
+            let sortOrder =
+                document.getElementById("sortOrder")
+                    .value;
+
+            // FILTER STUDENTS
+
+            let filteredStudents =
+                students.filter(student => {
+
+                    // SEARCH
+
+                    let matchesSearch =
+
+                        student.name
+                            .toLowerCase()
+                            .includes(keyword)
+
+                        ||
+
+                        student.id
+                            .toLowerCase()
+                            .includes(keyword);
+
+                    // COURSE FILTER
+
+                    let matchesCourse =
+
+                        course === "All"
+
+                        ||
+
+                        student.course === course;
+
+
+                    return matchesSearch &&
+                        matchesCourse;
+
+                });
+
+            // SORT A-Z
+
+            if (sortOrder === "az") {
+
+                filteredStudents.sort((a, b) =>
+
+                    a.name.localeCompare(b.name)
+
+                );
+
+            }
+
+            // SORT Z-A
+
+            if (sortOrder === "za") {
+
+                filteredStudents.sort((a, b) =>
+
+                    b.name.localeCompare(a.name)
+
+                );
+
+            }
+
+            // DISPLAY RESULT
+
+            renderStudents(filteredStudents);
+
+        }
+
+    </script>
 
 </body>
 

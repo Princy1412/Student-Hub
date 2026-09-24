@@ -9,118 +9,119 @@
 
 <body class="register">
 
-<div class="register-box">
+    <div class="register-box">
 
-<h1>📝 Event Registration</h1>
+        <h1>📝 Event Registration</h1>
 
-<hr>
+        <hr>
 
-<form id="registrationForm" action="register.php" method="POST">
+        <form id="registrationForm">
 
-<label>👤 Full Name</label><br>
-<input type="text" id="name" name="name" placeholder="Enter your full name">
-<small id="nameError"></small>
-<br><br>
+            <label>👤 Full Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
+            <small id="nameError"></small>
+            <br><br>
 
-<label>🆔 Roll Number</label><br>
-<input type="text" id="rollNumber" name="rollNumber" placeholder="Enter your roll number">
-<small id="rollError"></small>
-<br><br>
+            <label>🆔 Roll Number</label><br>
+            <input type="text" id="rollNumber" name="rollNumber" placeholder="Enter your roll number">
+            <small id="rollError"></small>
+            <br><br>
 
-<label>📧 Email</label><br>
-<input type="email" id="email" name="email" placeholder="Enter your email">
-<small id="emailError"></small>
-<br><br>
+            <label>📧 Email</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <small id="emailError"></small>
+            <br><br>
 
-<label>📞 Phone Number</label><br>
-<input type="tel" id="mobile" name="mobile" placeholder="Enter your phone number">
-<small id="mobileError"></small>
-<br><br>
+            <label>📞 Phone Number</label><br>
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter your phone number">
+            <small id="mobileError"></small>
+            <br><br>
 
-<label>🔒 Password</label><br>
-<input type="password" id="password" name="password" placeholder="Enter your password">
-<br><br>
+            <label>🔒 Password</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter your password">
+            <br><br>
 
-<label>🔐 Confirm Password</label><br>
-<input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
-<small id="passwordError"></small>
-<br><br>
+            <label>🔐 Confirm Password</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+            <small id="passwordError"></small>
+            <br><br>
 
-<label>📚 Semester</label><br>
-<input type="text" id="semester" name="semester" placeholder="Enter your semester">
-<small id="semesterError"></small>
-<br><br>
+            <label>📚 Semester</label><br>
+            <input type="text" id="semester" name="semester" placeholder="Enter your semester">
+            <small id="semesterError"></small>
+            <br><br>
 
-<label>🎓 Course</label><br>
-<select id="course" name="course">
-    <option value="">Select Course</option>
-    <option value="CSE">Computer Science Engineering</option>
-    <option value="IT">Information Technology</option>
-    <option value="CE">Computer Engineering</option>
-</select>
+            <label>🎓 Course</label><br>
+            <select id="course" name="course">
+                <option value="">Select Course</option>
+                <option value="CSE">Computer Science Engineering</option>
+                <option value="IT">Information Technology</option>
+                <option value="CE">Computer Engineering</option>
+            </select>
 
-<small id="courseError"></small>
-<br><br>
+            <small id="courseError"></small>
+            <br><br>
 
-<label>📅 Year</label><br>
-<select id="year" name="year">
-    <option value="">Select Year</option>
-    <option value="1">1st Year</option>
-    <option value="2">2nd Year</option>
-    <option value="3">3rd Year</option>
-    <option value="4">4th Year</option>
-</select>
+            <label>📅 Year</label><br>
+            <select id="year" name="year">
+                <option value="">Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
 
-<small id="yearError"></small>
-<br><br>
+            <small id="yearError"></small>
+            <br><br>
 
-<label>⚧ Gender</label><br>
+            <label>⚧ Gender</label><br>
 
-<input type="radio" name="gender" value="Male"> Male
-<input type="radio" name="gender" value="Female"> Female
-<input type="radio" name="gender" value="Other"> Other
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+            <input type="radio" name="gender" value="Other"> Other
 
-<small id="genderError"></small>
+            <small id="genderError"></small>
 
-<br><br>
+            <br><br>
 
-<label>
-    <input type="checkbox" id="terms" name="terms">
-    I accept the Terms and Conditions
-</label>
+            <label>
+                <input type="checkbox" id="terms" name="terms">
+                I accept the Terms and Conditions
+            </label>
 
-<small id="termsError"></small>
+            <small id="termsError"></small>
 
-<br><br>
+            <br><br>
 
-<label>🎉 Select Event</label><br>
+            <label>🎉 Select Event</label><br>
 
-<select id="event" name="event">
-    <option value="24-Hour Coding Challenge">24-Hour Coding Challenge</option>
-    <option value="AI & Machine Learning Workshop">AI & Machine Learning Workshop</option>
-    <option value="Web Development Bootcamp">Web Development Bootcamp</option>
-</select>
+            <select id="event" name="event">
+                <option value="24-Hour Coding Challenge">24-Hour Coding Challenge</option>
+                <option value="AI & Machine Learning Workshop">AI & Machine Learning Workshop</option>
+                <option value="Web Development Bootcamp">Web Development Bootcamp</option>
+            </select>
 
-<br><br>
+            <br><br>
 
-<label>💬 Why do you want to participate?</label><br>
+            <label>💬 Why do you want to participate?</label><br>
 
-<textarea id="reason" name="reason" rows="5" placeholder="Write your answer here..."></textarea>
+            <textarea id="reason" name="reason" rows="5" placeholder="Write your answer here..."></textarea>
 
-<div class="buttons">
-    <input type="submit" value="Register">
-    <input type="reset" value="Reset">
-</div>
+            <div class="buttons">
+                <input type="submit" value="Register">
+                <input type="reset" value="Reset">
+            </div>
 
-</form>
+        </form>
 
-<div class="back">
-    <a href="events2.html">⬅️ Back to Events</a>
-</div>
+        <div class="back">
+            <a href="events2.html">⬅️ Back to Events</a>
+        </div>
 
-</div>
+    </div>
 
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

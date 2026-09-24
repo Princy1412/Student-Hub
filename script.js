@@ -28,7 +28,6 @@ function toggleFAQ(button) {
     }
 }
 
-
 // MODAL POPUP
 
 function openModal() {
